@@ -21,6 +21,6 @@ jobs:
         ssh -oStrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} -i secret_key
         cd /usr/share/nginx/html/myapp/qa_allocation
         git pull origin master
-        docker exec -it myapp_app_1 /bin/sh
-        npm run build
+# docker exec -it myapp_app_1 /bin/sh
+# npm run build
 
