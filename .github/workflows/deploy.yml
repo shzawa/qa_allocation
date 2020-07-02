@@ -16,7 +16,10 @@ jobs:
       EC2_USER: ${{ secrets.EC2_USER }}
       EC2_HOST: ${{ secrets.EC2_HOST }}
       run: |
-        echo "$SECRET_KEY" > secret_key
-        cat secret_key
-        chmod 600 secret_key
-        ssh -oStrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} -i secret_key "cd /usr/share/nginx/html/myapp/qa_allocation && git pull origin master"
+        touch hoge
+        echo "aaaa" > hoge
+        cat hoge
+# echo "$SECRET_KEY" > secret_key
+# cat secret_key
+# chmod 600 secret_key
+# ssh -oStrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} -i secret_key "cd /usr/share/nginx/html/myapp/qa_allocation && git pull origin master"
