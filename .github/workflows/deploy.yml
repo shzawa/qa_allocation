@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
     - name: Deploy
+      uses: actions/checkout@v2
     # 保存したシークレットたちを環境変数に設定
     env:
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
