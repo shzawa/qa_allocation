@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: test
+      uses: actions/checkout@v1
     # 保存したシークレットたちを環境変数に設定
     env:
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
